@@ -1,4 +1,5 @@
+Note the dataset is (https://drive.google.com/file/d/1udzVidq-uKp-muCJ0ZReHJ5mjCafesuE/view?usp=sharing)
 Please note that my main appraoch is identified trends among the data and created new feature(boolean) which is different than typical ML method. 
-The
-Instead going futher with the analysis, I went back to include a clean dataset
-The Cleandata included everything but the surface_Area, it shows signs of heteroscedasticity.
+During the cleaning stage, remove several numerical features tha contains large range of data.
+My model was near perfect(SimpleData), so I did a test run on Model-RandomForestTest without changes to all the numerical data, only simply removed step, ids, isflagged.
+I ran the data again with RandomForest in SimppleData_2, with only removing the features that are not numerical, step, and ifFlagged. I used it as a baseline. Then I added 2 categorical feature base on the ratio between amount, balance from destination and origin. The NewModel has improved the ability to detect the frauds, while increased some false positive. I prefer the NewModel we want to detect as much fraud as we can.
